@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="920" height="460">
+  <defs>
+    <!-- Background Gradient (Obsidian Black) -->
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0812"/>
+      <stop offset="100%" stop-color="#040307"/>
+    </linearGradient>
+
+    <!-- Header Gradient -->
+    <linearGradient id="termHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#140b1e"/>
+      <stop offset="100%" stop-color="#0d0814"/>
+    </linearGradient>
+
+    <!-- Border Glow in Fuchsia -->
+    <linearGradient id="borderGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#ff2a85" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="fuchsiaTextGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Terminal Window Base -->
+  <rect x="2" y="2" width="916" height="456" rx="10" fill="url(#termBg)" stroke="url(#borderGradient)" stroke-width="1.5"/>
+
+  <!-- Title bar -->
+  <path d="M2,10 Q2,2 10,2 L910,2 Q918,2 918,10 L918,40 L2,40 Z" fill="url(#termHeader)"/>
+  <line x1="2" y1="40" x2="918" y2="40" stroke="#261538" stroke-width="1"/>
+
+  <!-- Window Control Dots -->
+  <circle cx="24" cy="21" r="5.5" fill="#ef4444"/>
+  <circle cx="44" cy="21" r="5.5" fill="#f59e0b"/>
+  <circle cx="64" cy="21" r="5.5" fill="#10b981"/>
+
+  <!-- Terminal Tab Header (Parrot OS style) -->
+  <g transform="translate(100, 8)">
+    <rect x="0" y="0" width="240" height="26" rx="4" fill="#09060e" stroke="#261538" stroke-width="1"/>
+    <text x="14" y="18" font-family="'Fira Code', monospace" font-size="12" fill="#ff007f" font-weight="700">#</text>
+    <text x="30" y="17" font-family="'Fira Code', monospace" font-size="12" fill="#a1a1aa" font-weight="500">sbznn@parrot-sec: ~</text>
+  </g>
+
+  <!-- Right Protocol Status -->
+  <text x="895" y="25" text-anchor="end" font-family="'Fira Code', monospace" font-size="11" fill="#71717a">
+    SESSION: ENCRYPTED // TLS_v1.3
+  </text>
+
+  <!-- Background Watermark Circuit -->
+  <g opacity="0.08" stroke="#ff007f" stroke-width="1" fill="none">
+    <circle cx="800" cy="250" r="100"/>
+    <circle cx="800" cy="250" r="70"/>
+    <line x1="680" y1="250" x2="920" y2="250"/>
+    <line x1="800" y1="130" x2="800" y2="370"/>
+  </g>
+
+  <!-- Terminal Content Text -->
+  <g font-family="'Fira Code', 'Cascadia Code', 'Courier New', monospace" font-size="14.5">
+
+    <!-- Prompt Line 1 -->
+    <text x="32" y="78">
+      <tspan fill="#ff70a6" font-weight="700">┌──(</tspan>
+      <tspan fill="#ff007f" font-weight="700">sbznn@parrot-sec</tspan>
+      <tspan fill="#ff70a6" font-weight="700">)-[</tspan>
+      <tspan fill="#f4f4f5">~</tspan>
+      <tspan fill="#ff70a6" font-weight="700">]</tspan>
+    </text>
+
+    <!-- Prompt Line 2 & Command -->
+    <text x="32" y="104">
+      <tspan fill="#ff70a6" font-weight="700">└─# </tspan>
+      <tspan fill="#ffffff" font-weight="700">./recon-audit --target self</tspan>
+    </text>
+
+    <!-- Audit Header Banner -->
+    <text x="32" y="136" font-size="13" fill="#71717a">
+      [*] Initializing profile recon audit module v2.5... OK
+    </text>
+
+    <!-- Scan Results (No emojis, fuchsia & black styling) -->
+    <!-- IDENTITY -->
+    <text x="32" y="168">
+      <tspan fill="#ff007f" font-weight="700">[+] IDENTITY    : </tspan>
+      <tspan fill="#ffffff" font-weight="700" filter="url(#fuchsiaTextGlow)">Sebastian Doncel</tspan>
+      <tspan fill="#71717a"> [Sbznn17dev]</tspan>
+    </text>
+
+    <!-- OCCUPATION -->
+    <text x="32" y="196">
+      <tspan fill="#ff007f" font-weight="700">[+] OCCUPATION  : </tspan>
+      <tspan fill="#f4f4f5">Desarrollador</tspan>
+      <tspan fill="#52525b"> // </tspan>
+      <tspan fill="#ff70a6">Estudiante de Ingeniería Informática</tspan>
+    </text>
+
+    <!-- BASE_NODE -->
+    <text x="32" y="224">
+      <tspan fill="#ff007f" font-weight="700">[+] BASE_NODE   : </tspan>
+      <tspan fill="#f4f4f5">Colombia</tspan>
+      <tspan fill="#71717a"> [LatAm / UTC-5]</tspan>
+    </text>
+
+    <!-- CORE_FOCUS -->
+    <text x="32" y="252">
+      <tspan fill="#ff007f" font-weight="700">[+] CORE_FOCUS  : </tspan>
+      <tspan fill="#ff2a85" font-weight="600">Ciberseguridad</tspan>
+      <tspan fill="#52525b"> &amp; </tspan>
+      <tspan fill="#ff70a6" font-weight="600">Desarrollo de Software</tspan>
+    </text>
+
+    <!-- SISTEMAS -->
+    <text x="32" y="280">
+      <tspan fill="#ff007f" font-weight="700">[+] SISTEMAS    : </tspan>
+      <tspan fill="#ff2a85" font-weight="600">Parrot OS</tspan>
+      <tspan fill="#71717a"> (Uso actual) // </tspan>
+      <tspan fill="#e95420" font-weight="600">Ubuntu</tspan>
+      <tspan fill="#71717a">, </tspan>
+      <tspan fill="#f4f4f5">Linux</tspan>
+    </text>
+
+    <!-- STACK -->
+    <text x="32" y="308">
+      <tspan fill="#ff007f" font-weight="700">[+] TECH_STACK  : </tspan>
+      <tspan fill="#38bdf8">Python</tspan>
+      <tspan fill="#71717a">, </tspan>
+      <tspan fill="#4ade80">Node.js</tspan>
+      <tspan fill="#71717a">, </tspan>
+      <tspan fill="#facc15">JavaScript</tspan>
+      <tspan fill="#71717a">, </tspan>
+      <tspan fill="#fb923c">Java</tspan>
+      <tspan fill="#71717a">, </tspan>
+      <tspan fill="#60a5fa">SQL</tspan>
+      <tspan fill="#71717a">, </tspan>
+      <tspan fill="#f4f4f5">HTML5/CSS</tspan>
+    </text>
+
+    <!-- INTERESTS -->
+    <text x="32" y="336">
+      <tspan fill="#ff007f" font-weight="700">[+] INTERESES   : </tspan>
+      <tspan fill="#d4d4d8">Hacking Ético, Análisis de Vulnerabilidades, Seguridad Defensiva</tspan>
+    </text>
+
+    <!-- FILOSOFÍA -->
+    <text x="32" y="366">
+      <tspan fill="#ff007f" font-weight="700">[+] FILOSOFÍA   : </tspan>
+      <tspan fill="#ffffff">"Comprender el código y analizar sistemas para mantenerlos seguros."</tspan>
+    </text>
+
+    <!-- Next Prompt with Fuchsia Blinking Cursor -->
+    <text x="32" y="408">
+      <tspan fill="#ff70a6" font-weight="700">┌──(</tspan>
+      <tspan fill="#ff007f" font-weight="700">sbznn@parrot-sec</tspan>
+      <tspan fill="#ff70a6" font-weight="700">)-[</tspan>
+      <tspan fill="#f4f4f5">~</tspan>
+      <tspan fill="#ff70a6" font-weight="700">]</tspan>
+    </text>
+    <text x="32" y="432">
+      <tspan fill="#ff70a6" font-weight="700">└─# </tspan>
+      <tspan fill="#ff007f" font-weight="700">█</tspan>
+      <animate attributeName="opacity" values="1;1;0;0;1" dur="1s" repeatCount="indefinite" keyTimes="0;0.5;0.51;0.99;1"/>
+    </text>
+
+  </g>
+</svg>

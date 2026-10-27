@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 24" width="1200" height="24">
+  <defs>
+    <!-- Ultra-Clean Fuchsia Laser Gradient -->
+    <linearGradient id="fuchsiaLaser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#ff007f" stop-opacity="0.3"/>
+      <stop offset="48%" stop-color="#ff007f" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="52%" stop-color="#ff007f" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#ff007f" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff007f" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle Glow Filter -->
+    <filter id="laserGlow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Slim Laser Line -->
+  <line x1="120" y1="12" x2="1080" y2="12" stroke="url(#fuchsiaLaser)" stroke-width="1.5" filter="url(#laserGlow)"/>
+
+  <!-- Left Accent Pip -->
+  <circle cx="565" cy="12" r="1.5" fill="#ff70a6" opacity="0.8"/>
+
+  <!-- Center Minimalist Cyber Diamond -->
+  <g transform="translate(600, 12)">
+    <polygon points="0,-6 6,0 0,6 -6,0" fill="#07040a" stroke="#ff007f" stroke-width="1.4" filter="url(#laserGlow)"/>
+    <circle r="1.8" fill="#ffffff">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Right Accent Pip -->
+  <circle cx="635" cy="12" r="1.5" fill="#ff70a6" opacity="0.8"/>
+</svg>

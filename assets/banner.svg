@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300">
+  <defs>
+    <!-- Dark Obsidian / Fuchsia Gradient -->
+    <linearGradient id="bgObsidian" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040306"/>
+      <stop offset="50%" stop-color="#0c0712"/>
+      <stop offset="100%" stop-color="#030204"/>
+    </linearGradient>
+
+    <!-- Fuchsia Glow Gradient -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="100%" stop-color="#99004d"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Obsidian Background -->
+  <rect width="1200" height="300" fill="url(#bgObsidian)"/>
+
+  <!-- Minimalist Cyber Grid Lines -->
+  <g opacity="0.08" stroke="#ff007f" stroke-width="1">
+    <line x1="0" y1="50" x2="1200" y2="50"/>
+    <line x1="0" y1="110" x2="1200" y2="110"/>
+    <line x1="0" y1="170" x2="1200" y2="170"/>
+    <line x1="0" y1="230" x2="1200" y2="230"/>
+
+    <line x1="120" y1="0" x2="120" y2="300"/>
+    <line x1="280" y1="0" x2="280" y2="300"/>
+    <line x1="440" y1="0" x2="440" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="760" y1="0" x2="760" y2="300"/>
+    <line x1="920" y1="0" x2="920" y2="300"/>
+    <line x1="1080" y1="0" x2="1080" y2="300"/>
+  </g>
+
+  <!-- Right Side: Minimalist Faceted Cyber Security Shield Emblem (No radar) -->
+  <g transform="translate(1000, 150)">
+    <!-- Ambient Rotating Outer Ring -->
+    <circle r="95" fill="none" stroke="#ff007f" stroke-width="1" stroke-dasharray="6,8" opacity="0.25">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="75" fill="none" stroke="#ff70a6" stroke-width="0.8" stroke-dasharray="3,6" opacity="0.2">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="20s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Outer Hex Shield Boundary -->
+    <polygon points="0,-65 52,-30 52,35 0,68 -52,35 -52,-30" fill="#08040d" stroke="#ff007f" stroke-width="1.8" filter="url(#neonGlow)"/>
+
+    <!-- Inner Faceted Geometry (Security Core) -->
+    <polygon points="0,-45 36,-20 36,22 0,46 -36,22 -36,-20" fill="#120619" stroke="#ff2a85" stroke-width="1.2"/>
+    
+    <!-- Central Keyhole / Cyber Core Glyph -->
+    <path d="M 0,-18 L 16,-6 L 16,14 L 0,24 L -16,14 L -16,-6 Z" fill="url(#shieldGrad)" opacity="0.85"/>
+    <circle cx="0" cy="0" r="4.5" fill="#ffffff" filter="url(#softGlow)"/>
+    <line x1="0" y1="4.5" x2="0" y2="12" stroke="#ffffff" stroke-width="2"/>
+
+    <!-- Corner Crosshair Nodes -->
+    <circle cx="65" cy="-45" r="2" fill="#ff007f" opacity="0.6"/>
+    <circle cx="-65" cy="45" r="2" fill="#ff70a6" opacity="0.6"/>
+  </g>
+
+  <!-- Left Main Content Area -->
+  <g font-family="'Fira Code', 'Cascadia Code', monospace">
+    
+    <!-- Top System Protocol Tag -->
+    <g transform="translate(80, 52)">
+      <rect x="0" y="0" width="220" height="26" rx="4" fill="#13081a" stroke="#ff007f" stroke-width="1" opacity="0.95"/>
+      <circle cx="14" cy="13" r="3.5" fill="#ff007f">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="26" y="17" fill="#ff70a6" font-size="11.5" font-weight="700" letter-spacing="0.5px">
+        SEC_OPS // SBZNN17DEV
+      </text>
+    </g>
+
+    <!-- Full Name in Pure Bold White -->
+    <text x="80" y="126" font-family="'Segoe UI', -apple-system, sans-serif" font-size="46" font-weight="900" fill="#ffffff" letter-spacing="0.5px">
+      SEBASTIAN DONCEL
+    </text>
+
+    <!-- Subtitle / Role (No emojis, sleek styling) -->
+    <text x="80" y="164" font-size="15" font-weight="600" fill="#a1a1aa">
+      <tspan fill="#ff007f">DESARROLLADOR</tspan>
+      <tspan fill="#3f3f46"> │ </tspan>
+      <tspan fill="#ff70a6">CIBERSEGURIDAD</tspan>
+      <tspan fill="#3f3f46"> │ </tspan>
+      <tspan fill="#f4f4f5">INGENIERÍA INFORMÁTICA</tspan>
+    </text>
+
+    <!-- Minimalist Telemetry Boxes -->
+    <g transform="translate(80, 202)" font-size="12.5">
+      <!-- Box 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="130" height="26" rx="3" fill="#110717" stroke="#2a1236" stroke-width="1"/>
+        <text x="12" y="17" fill="#71717a">SYS: <tspan fill="#ff007f" font-weight="600">PARROT OS</tspan></text>
+      </g>
+      <!-- Box 2 -->
+      <g transform="translate(140, 0)">
+        <rect x="0" y="0" width="125" height="26" rx="3" fill="#110717" stroke="#2a1236" stroke-width="1"/>
+        <text x="12" y="17" fill="#71717a">EXP: <tspan fill="#ff70a6" font-weight="600">UBUNTU</tspan></text>
+      </g>
+      <!-- Box 3 -->
+      <g transform="translate(275, 0)">
+        <rect x="0" y="0" width="130" height="26" rx="3" fill="#110717" stroke="#2a1236" stroke-width="1"/>
+        <text x="12" y="17" fill="#71717a">LOC: <tspan fill="#f4f4f5" font-weight="600">COLOMBIA</tspan></text>
+      </g>
+    </g>
+
+    <!-- Bottom Engineering Motto -->
+    <text x="82" y="260" font-size="12" fill="#52525b" font-weight="500">
+      &gt; <tspan fill="#71717a">ANALYSIS: UNDERSTANDING SYSTEMS AND BUILDING SECURE SOFTWARE ARCHITECTURES.</tspan>
+    </text>
+
+  </g>
+
+  <!-- Accent Edge Lines -->
+  <line x1="0" y1="0" x2="1200" y2="0" stroke="#ff007f" stroke-width="2" opacity="0.9"/>
+  <line x1="0" y1="298" x2="1200" y2="298" stroke="#ff2a85" stroke-width="2" opacity="0.9"/>
+</svg>
